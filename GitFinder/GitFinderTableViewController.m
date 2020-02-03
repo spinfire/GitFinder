@@ -20,9 +20,10 @@
 @end
 
 @implementation GitFinderTableViewController
+
 NSMutableArray* getDataUser(NSString *name){
     NSDictionary *arr;
-    NSString *str = [NSString stringWithFormat:@"https://api.github.com/search/users\?q\=%@", name];
+    NSString *str = [NSString stringWithFormat:@"https://api.github.com/search/users\?q\=%@\&per_page=5", name];
 
     NSURL *url = [[NSURL alloc]initWithString:str];
     NSData *data = [[NSData alloc ]initWithContentsOfURL:url];
