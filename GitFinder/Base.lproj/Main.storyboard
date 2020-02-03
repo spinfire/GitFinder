@@ -36,7 +36,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="IHp-EO-Bxd"/>
                     <connections>
-                        <outlet property="searchBar" destination="R9k-aV-tNR" id="Z8G-6j-U7S"/>
+                        <outlet property="searchBar" destination="R9k-aV-tNR" id="SMs-mR-Wer"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UgK-Ni-ogf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -58,6 +58,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2i9-Q3-5dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-320" y="-489"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="t9T-UT-8s4">
+            <objects>
+                <viewController id="wSp-dh-uXt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mei-Ao-MWh"/>
+                        <viewControllerLayoutGuide type="bottom" id="sjq-P6-xv5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aY5-MW-iBd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghz-r1-atj">
+                                <rect key="frame" x="186" y="437" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yzr-FN-cKO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1632" y="-770"/>
         </scene>
     </scenes>
 </document>

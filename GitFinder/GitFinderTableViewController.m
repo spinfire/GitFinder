@@ -12,6 +12,7 @@
 @interface GitFinderTableViewController()
 {
     NSArray *devices;
+    NSMutableArray *names;
     NSMutableArray *filteredDevices;
     
     BOOL isFiltered;
@@ -19,7 +20,7 @@
 @end
 
 @implementation GitFinderTableViewController
-void getDataUser(NSString *name){
+NSMutableArray* getDataUser(NSString *name){
     NSDictionary *arr;
     NSString *str = [NSString stringWithFormat:@"https://api.github.com/search/users\?q\=%@", name];
 
@@ -27,8 +28,18 @@ void getDataUser(NSString *name){
     NSData *data = [[NSData alloc ]initWithContentsOfURL:url];
 
     arr = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
+    NSArray* albumsvideo = [arr objectForKey:@"items"];
+    NSMutableArray *namesList = [[NSMutableArray alloc] init];
+    for (int i = 1; i <= 5; i++)
+    {
+        NSString *titre1 = [[albumsvideo objectAtIndex:i]valueForKey:@"login"];
+        [namesList addObject:titre1];
+    }
 
-    NSLog(@"%@",arr);
+    return namesList;
+    
+
 }
 
 void greetPerson(NSString *name) {
@@ -41,8 +52,6 @@ void greetPerson(NSString *name) {
     [super viewDidLoad];
     isFiltered = false;
     self.searchBar.delegate = self;
-    devices = @[@"iPhone",@"iPad",@"iPod",@"iMac",@"iWatch", @"iTV"];
-
     greetPerson(@"PERSONA");
 
 }
@@ -57,13 +66,9 @@ void greetPerson(NSString *name) {
     }
     else{
         isFiltered = true;
-        getDataUser(searchText);
-        filteredDevices = [[NSMutableArray alloc]init];
-        for (NSString *device in devices){
-            NSRange nameRange = [device rangeOfString:searchText options:NSCaseInsensitiveSearch];
-            if (nameRange.location != NSNotFound){
-                [filteredDevices addObject:device];
-            }
+        names.removeAllObjects;
+        if (searchText != Nil){
+                names = getDataUser(searchText);
         }
     }
     [self.tableView reloadData];
@@ -84,9 +89,9 @@ void greetPerson(NSString *name) {
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     if (isFiltered){
-        return filteredDevices.count;
+        return names.count;
     }
-    return devices.count;
+    return 0;
 }
 
 
@@ -94,11 +99,11 @@ void greetPerson(NSString *name) {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     if (isFiltered){
         
-        cell.textLabel.text = filteredDevices[indexPath.row];
+        cell.textLabel.text = names[indexPath.row];
         
     }
     else{
-        cell.textLabel.text = devices[indexPath.row];
+        //cell.textLabel.text = devices[indexPath.row];
     }
     return cell;
 }

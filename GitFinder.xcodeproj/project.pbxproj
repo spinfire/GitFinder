@@ -13,6 +13,7 @@
 		64193FB023E635EE000A45E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64193FAE23E635EE000A45E2 /* LaunchScreen.storyboard */; };
 		64193FB323E635EE000A45E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64193FB223E635EE000A45E2 /* main.m */; };
 		64193FBD23E7CD88000A45E2 /* GitFinderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64193FBC23E7CD88000A45E2 /* GitFinderTableViewController.m */; };
+		641DEA4723E7F0F500ABA75E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 641DEA4623E7F0F500ABA75E /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		64193FB223E635EE000A45E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		64193FBC23E7CD88000A45E2 /* GitFinderTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitFinderTableViewController.m; sourceTree = "<group>"; };
 		64193FBE23E7CDCF000A45E2 /* GitFinderTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitFinderTableViewController.h; sourceTree = "<group>"; };
+		641DEA4623E7F0F500ABA75E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		641DEA4923E7F15A00ABA75E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 				64193FA023E635ED000A45E2 /* AppDelegate.h */,
 				64193FA123E635ED000A45E2 /* AppDelegate.m */,
 				64193FBC23E7CD88000A45E2 /* GitFinderTableViewController.m */,
+				641DEA4623E7F0F500ABA75E /* ViewController.m */,
+				641DEA4923E7F15A00ABA75E /* ViewController.h */,
 				64193FBE23E7CDCF000A45E2 /* GitFinderTableViewController.h */,
 				64193FA923E635ED000A45E2 /* Main.storyboard */,
 				64193FAC23E635EE000A45E2 /* Assets.xcassets */,
@@ -143,6 +148,7 @@
 			files = (
 				64193FBD23E7CD88000A45E2 /* GitFinderTableViewController.m in Sources */,
 				64193FA223E635ED000A45E2 /* AppDelegate.m in Sources */,
+				641DEA4723E7F0F500ABA75E /* ViewController.m in Sources */,
 				64193FB323E635EE000A45E2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
