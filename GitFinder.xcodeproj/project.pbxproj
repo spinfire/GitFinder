@@ -63,9 +63,9 @@
 			children = (
 				64193FA023E635ED000A45E2 /* AppDelegate.h */,
 				64193FA123E635ED000A45E2 /* AppDelegate.m */,
-				64193FBC23E7CD88000A45E2 /* GitFinderTableViewController.m */,
 				641DEA4623E7F0F500ABA75E /* ViewController.m */,
 				641DEA4923E7F15A00ABA75E /* ViewController.h */,
+				64193FBC23E7CD88000A45E2 /* GitFinderTableViewController.m */,
 				64193FBE23E7CDCF000A45E2 /* GitFinderTableViewController.h */,
 				64193FA923E635ED000A45E2 /* Main.storyboard */,
 				64193FAC23E635EE000A45E2 /* Assets.xcassets */,
